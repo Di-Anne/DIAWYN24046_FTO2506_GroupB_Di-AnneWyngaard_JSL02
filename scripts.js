@@ -11,3 +11,10 @@ let description2 = prompt("Enter task 2 description:");
 
 let status2 = prompt("Enter task 2 status:");
 console.log(status2.toLowerCase());
+
+
+if (status1 && status2 === "todo" || "doing" || "done") {
+    console.log(status1 && status2);
+} else {
+    alert("Invalid status. Please enter `todo`, `doing`, or `done`.");
+}
