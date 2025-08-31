@@ -3,11 +3,11 @@ let title1 = prompt("Enter task 1 title:");
 let description1 = prompt("Enter task 1 description:");
 
 let status1 = prompt("Enter task 1 status:");
-console.log(.status1toLowerCase());
+console.log(status1.toLowerCase());
 
 let title2 = prompt("Enter task 2 title:");
 
 let description2 = prompt("Enter task 2 description:");
 
-let status2 = prompt("Enter task 2 title:");
-console.log(.status1toLowerCase());
+let status2 = prompt("Enter task 2 status:");
+console.log(status2.toLowerCase());
