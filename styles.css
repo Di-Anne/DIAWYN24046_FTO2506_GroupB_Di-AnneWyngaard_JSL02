@@ -82,20 +82,21 @@ body {
 
 /* ========== Header Section ============ */
 header {
+    display: flex; /*align launch heading and invisible logo next to each other*/
+    align-items: center; /*center lauch heading and invisible logo*/
+    justify-content: space-between;
+    padding-left: 30px;
     background-color: var(--background-white-color);
     height: 97px;
     border-bottom: 1px solid var(--border-grey-color);
 }
 
-.launch-heading {
-    font-size: 24px;
-    height: 100%;
-    margin: 0;
-    padding: 1em;
+h2 > .launch-heading {
+    font-size: 24px; 
 }
 
 .visually-hidden {
-    display: none;
+    display: none; /*Hide logo on Desktop screens*/
 }
 
 
