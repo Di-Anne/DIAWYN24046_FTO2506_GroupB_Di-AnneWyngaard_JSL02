@@ -12,15 +12,20 @@
     --todo-dot-color: #49C4E5;
     --doing-dot-color: #8471F2;
     --done-dot-color: #67E2AE;
+    --nav-bar-fixed-width: 300px; /*Sidebar has fixed width*/
+    --primary-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*subtle card shadow*/
 }
 
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     color: var(--main-text-color);
+    background-color: var(--background-offwhite-color);
     font-size: 15px;
     font-weight: bold;
     margin: 0;
     display: flex;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .nav-all-boards, .todo-title, .doing-title, .done-title {
@@ -31,37 +36,53 @@ body {
 }
 
 
-/*********Nav Section*********/
-nav {
-    width: 300px;
-    height: 1024px;
-    border-right: 1px solid var(--border-grey-color);
+/* ========== Nav Section ============ */
+.nav-bar {
+    background-color: var(--background-white-color);
+    display: flex;
+    flex-direction: column;
+    width: var(--nav-bar-fixed-width);
+    min-height: 100vh;
+    border-right: 1px solid var(--border-grey-color); /*Light-grey border to divide nav section from main section*/
 }
 
-.nav-logo {
-    padding: 2em;
+.nav-logo-container {
+    margin: 33px 113px 54px 34px; 
+}
+
+.nav-all-boards-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-all-boards {
-    padding: 2em;
+    padding: 0px 12px 5px 50px;
 }
 
 .nav-toggle {
     border: none;
     font-size: 15px;
+    font-weight: 600;
     color: var(--background-white-color);
-    width: 276px;
     height: 48px;
+    width: 276px;
     background: var(--main-theme-color);
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-radius: 0 100px 100px 0;
     text-align: left;
-    padding-left: 3.5em;
+    padding-left: 3.2em;
+    cursor: pointer;
+}
+
+/* ========== Main Layout ============ */
+.main-layout-container {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    width: 100%;
 }
 
 
-/*********Header*********/
+/* ========== Header Section ============ */
 header {
+    background-color: var(--background-white-color);
     height: 97px;
     border-bottom: 1px solid var(--border-grey-color);
 }
@@ -78,12 +99,11 @@ header {
 }
 
 
-/*********Main section*********/
+/* ========== Main Section ============ */
 main {
-    background: var(--background-offwhite-color);
     display: flex;
     gap: 20px;
-    width: 1140px;
+    width: 100%;
     height: 927px;
     padding: 1.5em;
 }
@@ -130,23 +150,21 @@ main {
     width: 280px;
     height: 60px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--primary-box-shadow);
 }
 
 
-/*********Media Queries*********/
+/* ========== Media Queries ============ */
 @media (max-width: 768px){
-    nav {
+    .nav-bar {
         display: none;
     }
 
     main {
-        width: 375px;
         flex-direction: column;
     }
 
     header {
-        width: 375px;
         height: 64px;
     }
 
