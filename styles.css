@@ -62,7 +62,6 @@ nav {
 
 /*********Header*********/
 header {
-    width: 1140px;
     height: 97px;
     border-bottom: 1px solid var(--border-grey-color);
 }
