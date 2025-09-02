@@ -167,7 +167,7 @@ main {
 
 
 /* ========== Media Queries ============ */
-@media (max-width: 1000px){
+@media (max-width: 1020px){
     .nav-bar {
         display: none;
     }
@@ -190,7 +190,7 @@ main {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     main {
         grid-template-columns: minmax(0, 360px); /* Stack cards in a single grid column*/
     }
