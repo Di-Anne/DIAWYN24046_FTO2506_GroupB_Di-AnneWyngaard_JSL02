@@ -100,20 +100,22 @@ h2 > .launch-heading {
 }
 
 
-/* ========== Main Section ============ */
+/* ========== Main Section Cards ============ */
+
+.main-container {
+    border: 1px solid black;s
+    padding-left: 35px;
+}
+
 main {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    height: 927px;
-    padding: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 300px)); /* 3 columns with min size and max size for responsiveness */
 }
 
 .todo-status, .doing-status, .done-status {
     display: flex;
     width: 120px;
     justify-content: space-between;
-    align-items: baseline;
 }
 
 .todo-title, .doing-title, .done-title {
@@ -174,8 +176,6 @@ main {
     }
 
     .visually-hidden {
-        display: revert;
-        margin-top: 1em;
-        margin-left: 1em;
+        display: revert; 
     }
 }
