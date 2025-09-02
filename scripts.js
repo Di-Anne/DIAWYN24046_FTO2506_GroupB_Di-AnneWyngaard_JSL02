@@ -1,31 +1,45 @@
-let title1 = prompt("Enter task 1 title:");
+// Prompt users for task 1 title, description and status inputs
 
-let description1 = prompt("Enter task 1 description:");
+let titleTask1 = prompt("Enter task 1 title:");
 
-let status1 = prompt("Enter task 1 status:");
-console.log(status1.toLowerCase());
+let descriptionTask1 = prompt("Enter task 1 description:");
 
-if (status1 === "todo" || "doing" || "done") {
-    console.log(status1);
+let statusTask1 = prompt("Enter task 1 status:").toLowerCase(); //convert the status input to lowercase
+
+// check if user status input is valid, if not return user to prompting
+
+while (statusTask1 !== "todo" && statusTask1 !== "doing" && statusTask1 !== "done") {
+  TaskStatus1 = prompt("Enter Task 1 Status: `todo`, `doing` or `done`").toLowerCase();
+}
+console.log(TaskTitle1, ": ", TaskStatus1);
+
+// Check if status is done or not with unique message in console
+
+if (statusTask1 !== "done") {
+    console.log("No tasks completed, let's get to work!");
 } else {
-    alert("Invalid status. Please enter `todo`, `doing`, or `done`.");
+    console.log("Title: Make corrections to JSL01, status: done");
 }
 
-let title2 = prompt("Enter task 2 title:");
+// Prompt users for task 2
 
-let description2 = prompt("Enter task 2 description:");
+let titleTask2 = prompt("Enter task 1 title:");
 
-let status2 = prompt("Enter task 2 status:");
-console.log(status2.toLowerCase());
+let descriptionTask2 = prompt("Enter task 1 description:");
 
-if (status1 === "todo" || "doing" || "done") {
-    console.log(status2);
-} else {
-    alert("Invalid status. Please enter `todo`, `doing`, or `done`.");
+let statusTask2 = prompt("Enter task 1 status:").toLowerCase(); //convert the status input to lowercase
+
+// check if user status input is valid, if not return user to prompting
+
+while (statusTask2 !== "todo" && statusTask2 !== "doing" && statusTask2 !== "done") {
+  TaskStatus1 = prompt("Enter Task 2 Status: `todo`, `doing` or `done`").toLowerCase();
 }
+console.log(TaskTitle2, ": ", TaskStatus2);
 
+// Check if status is done or not with unique message in console
 
-
-
-
-
+if (statusTask2 !== "done") {
+    console.log("No tasks completed, let's get to work!");
+} else {
+    console.log("Title: Make corrections to JSL02, status: done");
+}
