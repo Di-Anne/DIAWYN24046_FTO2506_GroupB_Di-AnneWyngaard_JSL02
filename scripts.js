@@ -13,11 +13,7 @@ while (statusTask1 !== "todo" && statusTask1 !== "doing" && statusTask1 !== "don
   statusTask1 = prompt("Enter task 1 status (todo, doing, done):").toLowerCase();
 }
 
-// Check if status is done or not with unique message in console
-
-if (statusTask1 !== "done") {
-    console.log("No tasks completed, let's get to work!");
-} 
+// Check if task 1 is done and log it
 
 if (statusTask1 === "done") {
     console.log(titleTask1 + ": " + "Make corrections to JSL01, " + "status: " + statusTask1);
@@ -38,11 +34,14 @@ while (statusTask2 !== "todo" && statusTask2 !== "doing" && statusTask2 !== "don
     statusTask2 = prompt("Enter task 2 status (todo, doing, done):").toLowerCase();
 }
 
-// Check if status is done or not with unique message in console
-
-if (statusTask2 !== "done") {
-    console.log("No tasks completed, let's get to work!");
+// Check if task 2 is done and log it
 
 if (statusTask2 === "done") {
     console.log(titleTask2 + ": " + "Make corrections to JSL02, " + "status: " + statusTask2);
 }
+
+// If neither task 1 nor 2 is done give encouring message
+
+if (statusTask1 !== "done" && statusTask2 !== "done") {
+    console.log("No tasks completed, let's get to work!");
+} 
