@@ -1,10 +1,10 @@
 // Prompt users for task 1 title, description and status inputs
 
-let titleTask1 = prompt("Enter task 1 title:");
+let task1Title = prompt("Enter task 1 title:");
 
-let descriptionTask1 = prompt("Enter task 1 description:");
+let task1Description = prompt("Enter task 1 description:");
 
-let statusTask1 = prompt("Enter task 1 status (todo, doing, done):").toLowerCase(); //convert the status input to lowercase
+let task1Status = prompt("Enter task 1 status (todo, doing, done):").toLowerCase(); //convert the status input to lowercase
 
 // check if user status input is valid, if not return user to prompt
 
